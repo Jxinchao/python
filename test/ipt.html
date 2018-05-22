@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+</head>
+<body>
+<div class="list">
+  <div class="listIpt">
+    <input type="text" value=""/>
+
+  </div>
+  <button class="btn">添加</button>
+</div>
+
+
+</div>
+
+</body>
+</html>
+  <script type="text/javascript">
+//  $(".btn").click(function () {
+//    var iptList = $(this).closest(".list").find(".listIpt input");
+//    console.log(iptList.length)
+//    for(var i = 0;i<iptList.length;i++){
+//        if(iptList.eq(i).val()==""){
+//
+//          alert("input不能为空")
+//          return false
+//        }
+//    }
+//    iptList.closest(".listIpt").append('<input type="text" value=""/>')
+//  })
+function Foo() {
+    getName = function () {
+        alert(1)
+    }
+    return this
+}
+
+Foo.getName = function () { alert(2) }
+Foo.prototype.getName = function () { alert(3) }
+
+function getName() { alert(5) }
+
+var getName = function () { alert(4) }
+
+Foo.getName()   // 2
+getName()       // 4
+Foo().getName()  // 1
+getName()		// 1
+new Foo.getName() // 2
+new Foo().getName() // 3
+new new Foo().getName()  // 3
+  </script>
+
